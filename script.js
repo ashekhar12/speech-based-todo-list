@@ -12,13 +12,11 @@ let p = document.createElement('p');
 function addItem(){
     const item = document.createElement('div');
     item.className = 'item';
-    item.addEventListener('keypress', (e) => { 
-        e.preventDefault();    
-        console.log(e.key);
-    });
+    
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.addEventListener('click', handleCheck);
+    
     item.appendChild(checkbox);
     item.appendChild(p);
     words.appendChild(item);
@@ -35,7 +33,7 @@ recognition.addEventListener('result', e => {
     // reload the page and start from begining if "reset" is encountered.
 
     if(transcript.includes('reset')){
-        window.location.href = '/';
+        window.location.reload();
     }
 
     p.textContent = transcript;

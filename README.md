@@ -2,13 +2,14 @@
 
 This project requires a server to work properly in dev.
 
-Available Scripts
 In the project directory, you can run:
 
 npm install
+
 Installs all packages required.See package.json file for more information.
 
 npm start
+
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
